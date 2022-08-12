@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: CharterItalic;
+  src: url('../assets/charterItalic.ttf');
+}
+
+@font-face {
+  font-family: Charter;
+  src: url('../assets/charterRegular.ttf');
+}
+@font-face {
+  font-family: Poppins;
+  src: url('../assets/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../assets/Roboto-Regular.ttf');
+}
+
 html,
 body {
   padding: 0;
@@ -5,22 +27,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-* {
-  box-sizing: border-box;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(240, 85, 85);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 3px;
 }
