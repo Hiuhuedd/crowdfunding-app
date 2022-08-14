@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { useRouter } from 'next/router'
 import { MediumContext } from '../context/MediumContext'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase'
+import { db } from '../firebaseConfig'
 
 const styles = {
   wrapper: `w-[50rem] h-[30rem] flex flex-col justify-start items-center gap-[1rem] p-[1rem] font-mediumSerif overflow-scroll`,

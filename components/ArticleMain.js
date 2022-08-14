@@ -16,7 +16,7 @@ const styles = {
   referencesContainer: `flex justify-between items-center mt-[2.2rem] mb-[1.2rem]`,
   authorContainer: `flex gap-[1rem]`,
   authorProfileImageContainer: `h-[3rem] w-[3rem] grid center rounded-full overflow-hidden`,
-  image: `object-fill`,
+  image: `object-fill  `,
   column: `flex-1 flex flex-col justify-center font-poppins text-xs`,
   postDetails: `flex gap-[.2rem] text-[#787878]`,
   listenButton: `flex items-center gap-[.2rem] text-[#1A8917]`,
@@ -83,8 +83,8 @@ const ArticleMain = ({ post, author }) => {
                   // src={`https://res.cloudinary.com/demo/image/fetch/${post[0].data.bannerImage}`}
                   src={post[0]?.data.bannerImage}
                   alt='banner'
-                  height={100}
-                  width={200}
+                  height={450}
+                  width={700}
                 />
               </div>
               <h1 className={styles.title}>{post[0].data?.title}</h1>

@@ -6,10 +6,7 @@ import { AiOutlineComment } from 'react-icons/ai'
 import { FaDonate } from 'react-icons/fa'
 import { BiAddToQueue } from 'react-icons/bi'
 import { MdMarkEmailUnread } from 'react-icons/md'
-import Neuralink from '../static/Neuralink.png'
-import elon from '../static/elon.jpeg'
-import edd from '../static/edd.jpeg'
-import JSLogo from '../static/cp.png'
+
 
 const styles = {
   wrapper: `h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem]`,
@@ -56,8 +53,9 @@ const Recommendations = ({ post,author }) => {
           <div className={styles.authorContainer}>
             <div>
             <div className={styles.authorProfileImageContainer}>
-              <Image
-                src={`https://res.cloudinary.com/demo/image/fetch/${author[0].data.imageUrl}`}
+              <img
+                // src={`https://res.cloudinary.com/demo/image/fetch/${author[0].data.imageUrl}`}
+                src={author[0]?.data.imageUrl}
                 alt='author'
                 width={100}
                 height={100}
@@ -83,7 +81,7 @@ const Recommendations = ({ post,author }) => {
           <div>Loading...</div>
           )}
 
-          <div className={styles.authorName}>{post[0]?.data?.title}</div>
+          <div className={styles.authorName}>{post[0]?.data.title}</div>
           <div className={styles.authorActions}>
 
           <button className={styles.actionButton1}><AiOutlineComment/> <span>Comment</span> </button>
@@ -92,7 +90,7 @@ const Recommendations = ({ post,author }) => {
           </div>
            
         <div className={styles.recommendationContainer}>
-          <div className={styles.title}>More from Medium</div>
+          <div className={styles.title}>More from Funder</div>
           <div className={styles.articlesContainer}>
             {recommendedPosts.map(post => (
               <div key={post.id} className={styles.articleContentWrapper}>
@@ -103,7 +101,7 @@ const Recommendations = ({ post,author }) => {
                         styles.recommendationAuthorProfileImageContainer
                       }
                     >
-                      <Image
+                      <img
                         src={post.author.image}
                         alt='author'
                         height={100}
@@ -117,7 +115,7 @@ const Recommendations = ({ post,author }) => {
                   <div className={styles.recommendationTitle}>{post.title}</div>
                 </div>
                 <div className={styles.recommendationThumbnailContainer}>
-                  <Image
+                  <img
                     className={styles.recommendationThumbnail}
                     src={post.image}
                     alt='thumbnail'
@@ -139,26 +137,26 @@ export default Recommendations
 const recommendedPosts = [
   {
     title: 'What can you do with Neurolinks?',
-    image: Neuralink,
+    image: "/neuralink.png",
     author: {
       name: 'Elon Musk',
-      image: elon,
+      image: "/elon.jpeg",
     },
   },
   {
     title: 'The Ultimate Writers solution: WritersCube',
-    image: edd,
+    image: "/edd.jpeg",
     author: {
       name: 'Hiuhu Edd',
-      image: edd,
+      image: "/edd.jpeg",
     },
   },
   {
     title: "Let's build together: Funder",
-    image: JSLogo,
+    image: "/cp.png",
     author: {
       name: 'Mae Maria',
-      image: JSLogo,
+      image: "/cp.png",
     },
   },
 ]
